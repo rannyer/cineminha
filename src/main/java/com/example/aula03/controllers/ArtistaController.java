@@ -1,5 +1,6 @@
 package com.example.aula03.controllers;
 
+import com.example.aula03.dtos.ArtistaDto;
 import com.example.aula03.models.Artista;
 import com.example.aula03.services.ArtistaService;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +23,8 @@ public class ArtistaController {
     }
 
     @PostMapping
-    public ResponseEntity<Artista> adicionar(@RequestBody Artista artista){
-        return ResponseEntity.ok(artistaService.criar(artista));
+    public ResponseEntity<Artista> adicionar(@RequestBody ArtistaDto artistaDto){
+        return ResponseEntity.ok(artistaService.criar(artistaDto));
     }
 
 

@@ -1,5 +1,6 @@
 package com.example.aula03.controllers;
 
+import com.example.aula03.dtos.FilmeDto;
 import com.example.aula03.models.Filme;
 import com.example.aula03.services.FilmeService;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class FilmeController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Filme>> buscarTodos(){
+    public ResponseEntity<List<FilmeDto>> buscarTodos(){
         return ResponseEntity.ok(filmeService.buscarTodos());
     }
 

@@ -26,7 +26,7 @@ public class Filme {
             name = "filme_artista",
             joinColumns = @JoinColumn(name = "filme_id"),
             inverseJoinColumns = @JoinColumn(name = "artista_id")
-    ) 
+    )
     @JsonIgnoreProperties("filmes")
     private List<Artista> artistas;
 
